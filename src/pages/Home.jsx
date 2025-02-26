@@ -54,7 +54,7 @@ const Home = () => {
         {filteredArticles.length > 2 && (
           <div className="md:col-span-2 flex flex-col space-y-6">
             {[filteredArticles[0], filteredArticles[1], filteredArticles[2]].map((article, index) => (
-              <div key={index} className="bg-transparent shadow-lg rounded-lg overflow-hidden flex bg-transparent">
+              <div key={index} className="bg-transparent shadow-lg rounded-lg overflow-hidden flex ">
                 <div className="p-6 flex flex-col justify-between w-1/2">
                   <h2 className="text-2xl font-bold mb-4 text-white">{article.title}</h2>
                   <p className="text-gray-300 mb-4">{article.description}</p>
@@ -72,7 +72,7 @@ const Home = () => {
 
         <div className="flex flex-col gap-4">
           {filteredArticles.slice(3, 7).map((article, index) => (
-            <div key={index} className="bg-transparent shadow-lg rounded-lg overflow-hidden flex flex-row bg-transparent">
+            <div key={index} className="bg-transparent shadow-lg rounded-lg overflow-hidden flex flex-row ">
               <div className="p-6 flex flex-col justify-between w-2/3">
                 <h2 className="text-xl font-bold mb-2 text-gray-100">{article.title}</h2>
                 <p className="text-gray-300 mb-2">{article.description}</p>
