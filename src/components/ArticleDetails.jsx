@@ -54,12 +54,12 @@ const ArticleDetails = () => {
   if (!article) return <p className="text-center mt-10">{t("article.noArticle")}</p>;
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-100 dark:bg-gray-900 p-4">
+    <div className="min-h-screen flex justify-center items-center bg-[#192236] dark:bg-gray-900 p-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="max-w-3xl w-full p-6 bg-white dark:bg-gray-800 shadow-2xl rounded-2xl backdrop-blur-lg"
+        className="max-w-3xl w-full p-6 bg-[#192236] dark:bg-gray-800 shadow-2xl rounded-2xl backdrop-blur-lg"
       >
         {/* Back Button */}
         <button
@@ -74,12 +74,12 @@ const ArticleDetails = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold text-gray-800 dark:text-gray-200"
+          className="text-3xl font-bold text-gray-100 dark:text-gray-200"
         >
           {article.title}
         </motion.h1>
 
-        <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">
+        <p className="text-gray-200 dark:text-gray-400 text-sm mt-1">
           {t("article.by")} {article.author || t("article.unknown")} | {new Date(article.publishedAt).toDateString()} | {article.source.name}
         </p>
 
@@ -98,7 +98,7 @@ const ArticleDetails = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-gray-700 dark:text-gray-300 mt-4"
+          className="text-gray-300 dark:text-gray-300 mt-4"
         >
           {article.description}
         </motion.p>
@@ -108,7 +108,7 @@ const ArticleDetails = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-gray-800 dark:text-gray-200 mt-4 leading-relaxed"
+          className="text-gray-300 dark:text-gray-200 mt-4 leading-relaxed"
         >
           {article.content}
         </motion.p>
@@ -122,13 +122,13 @@ const ArticleDetails = () => {
 
         {/* Comment Section */}
         <div className="mt-6">
-          <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">{t("Comments")}</h2>
+          <h2 className="text-xl font-semibold text-gray-100 dark:text-gray-200 mb-2">{t("Comments")}</h2>
 
           {/* Comments List */}
           <div className="mt-2 space-y-2">
             {comments.length > 0 ? (
               comments.map((comment, index) => (
-                <div key={index} className="p-2 border rounded-lg bg-gray-50 dark:bg-gray-700 dark:text-gray-200">
+                <div key={index} className="p-2 border rounded-lg bg-gray-50 dark:bg-gray-100 dark:text-gray-200">
                   {comment.text}
                 </div>
               ))
