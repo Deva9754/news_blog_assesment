@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "newsBlog": "समाचार ब्लॉग"
+    },
+    "categories": {
+        "general": "सामान्य",
+        "business": "व्यापार",
+        "entertainment": "मनोरंजन",
+        "health": "स्वास्थ्य",
+        "science": "विज्ञान",
+        "sports": "खेल",
+        "technology": "तकनीक"
+    },
+
+    "article": {
+        "by": "द्वारा",
+        "unknown": "अज्ञात",
+        "back": "वापस",
+        "noArticle": "कोई लेख नहीं मिला।"
+    }
+
+}
