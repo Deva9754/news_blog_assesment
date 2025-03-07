@@ -78,9 +78,7 @@
 //             {slides[currentIndex].title}
 //           </Typography>
 //           <Typography level="body-lg" sx={{ mb: 2, color:"whitesmoke" }}>{slides[currentIndex].description}</Typography>
-//           <CardActions>
-//             <Button variant="outlined" sx={{color:"whitesmoke"}} color="neutral" size="md">
-//               See details
+//         
 //     
 //          
 //       </Card>
