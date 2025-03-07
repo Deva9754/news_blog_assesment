@@ -83,10 +83,7 @@
 //               See details
 //             </Button>
 //             <Button variant="solid" color="primary" size="md">
-//               Learn more
-//             </Button>
-//           </CardActions>
-//         </CardContent>
+//          
 //       </Card>
 //     </Stack>
 //   );
