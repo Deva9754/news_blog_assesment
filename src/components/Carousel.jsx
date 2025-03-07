@@ -81,8 +81,7 @@
 //           <CardActions>
 //             <Button variant="outlined" sx={{color:"whitesmoke"}} color="neutral" size="md">
 //               See details
-//             </Button>
-//             <Button variant="solid" color="primary" size="md">
+//     
 //          
 //       </Card>
 //     </Stack>
