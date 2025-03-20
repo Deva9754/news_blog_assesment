@@ -22,7 +22,6 @@ const ArticleDetails = () => {
     }
   }, []);
   
-  // Load comments and likes from localStorage when component mounts
   useEffect(() => {
     if (article) {
       const savedComments = JSON.parse(localStorage.getItem(`comments-${article.title}`)) || [];
@@ -33,14 +32,12 @@ const ArticleDetails = () => {
     }
   }, [article]);
 
-  // Save likes to localStorage
   const handleLike = () => {
     const updatedLikes = likes + 1;
     setLikes(updatedLikes);
     localStorage.setItem(`likes-${article.title}`, JSON.stringify(updatedLikes));
   };
 
-  // Add a new comment and store it in localStorage
   const handleAddComment = () => {
     if (newComment.trim() === "") return;
 
@@ -61,7 +58,7 @@ const ArticleDetails = () => {
         transition={{ duration: 0.6 }}
         className="max-w-3xl w-full p-6 bg-[#192236] dark:bg-gray-800 shadow-2xl rounded-2xl backdrop-blur-lg"
       >
-        {/* Back Button */}
+        
         <button
           onClick={() => navigate(-1)}
           className="mb-4 text-blue-500 dark:text-blue-400 hover:underline transition-all"
@@ -69,7 +66,7 @@ const ArticleDetails = () => {
           ← {t("article.back")}
         </button>
 
-        {/* Title */}
+      
         <motion.h1
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -83,7 +80,7 @@ const ArticleDetails = () => {
           {t("article.by")} {article.author || t("article.unknown")} | {new Date(article.publishedAt).toDateString()} | {article.source.name}
         </p>
 
-        {/* Image */}
+       
         <motion.img
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -93,7 +90,7 @@ const ArticleDetails = () => {
           className="w-full h-64 object-cover mt-4 rounded-md shadow-md"
         />
 
-        {/* Description */}
+       
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +100,7 @@ const ArticleDetails = () => {
           {article.description}
         </motion.p>
 
-        {/* Full Content */}
+       
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -113,18 +110,18 @@ const ArticleDetails = () => {
           {article.content}
         </motion.p>
 
-        {/* Like & Comment Section */}
+      
         <div className="flex justify-between items-center mt-6">
           <button onClick={handleLike} className="flex items-center gap-2 text-blue-500 hover:text-blue-600">
             <FaThumbsUp /> {likes}
           </button>
         </div>
 
-        {/* Comment Section */}
+        
         <div className="mt-6">
           <h2 className="text-xl font-semibold text-gray-100 dark:text-gray-200 mb-2">{t("Comments")}</h2>
 
-          {/* Comments List */}
+       
           <div className="mt-2 space-y-2">
             {comments.length > 0 ? (
               comments.map((comment, index) => (
@@ -137,7 +134,7 @@ const ArticleDetails = () => {
             )}
           </div>
 
-          {/* Input Field */}
+       
           <div className="flex gap-2 mt-3">
             <input
               type="text"
