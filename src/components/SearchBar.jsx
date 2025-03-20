@@ -13,11 +13,10 @@ const SearchBar = ({ articles, setFilteredArticles, resetCategory }) => {
     setQuery(searchTerm);
 
     if (searchTerm === "") {
-      resetCategory(); // Reset to general category articles
+      resetCategory(); 
       return;
     }
 
-    // Filter articles based on the search term (title)
     const filtered = articles.filter((article) =>
       article.title.toLowerCase().includes(searchTerm)
     );
@@ -27,7 +26,7 @@ const SearchBar = ({ articles, setFilteredArticles, resetCategory }) => {
 
   const clearSearch = () => {
     setQuery("");
-    resetCategory(); // Reset to general category articles
+    resetCategory(); 
   };
 
   return (
